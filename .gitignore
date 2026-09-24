@@ -1,81 +1,44 @@
-# =========================
-# Dependencies
-# =========================
-node_modules/
-.pnp
-.pnp.js
+# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
 
-# =========================
-# Logs and debugging
-# =========================
-logs/
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
+# Compiled output
+/dist
+/tmp
+/out-tsc
+/bazel-out
 
-# =========================
-# Build and temporary files
-# =========================
-dist/
-build/
-out/
-tmp/
-.temp/
+# Node
+/node_modules
+npm-debug.log
+yarn-error.log
 
-# Framework-specific caches and artifacts
-.angular/
-.next/
-.nuxt/
-.vuepress/dist
-.svelte-kit/
-
-# =========================
-# Testing
-# =========================
-coverage/
-.nyc_output/
-.jest/
-
-# =========================
-# Environment variables
-# =========================
-# Ignore secrets, but keep .env.example if you add one
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-*.pem
-
-# =========================
-# IDE and editor settings
-# =========================
+# IDEs and editors
 .idea/
-.history/
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
 
-# VS Code
-# Ignore the whole .vscode folder except for shared configurations
+# Visual Studio Code
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+!.vscode/mcp.json
+.history/*
 
-# =========================
-# OS system files
-# =========================
+# Miscellaneous
+/.angular/cache
+.sass-cache/
+/connect.lock
+/coverage
+/libpeerconnection.log
+testem.log
+/typings
+__screenshots__/
+
+# System files
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
 Thumbs.db
