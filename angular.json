@@ -65,6 +65,13 @@
         },
         "serve": {
           "builder": "@angular/build:dev-server",
+          "options": {
+            "buildTarget": "your-project:build",
+            "host": "0.0.0.0",
+            "allowedHosts": [
+              "localhost"
+            ]
+          },
           "configurations": {
             "production": {
               "buildTarget": "ovchinnikova.art:build:production"

@@ -8,4 +8,4 @@ RUN apt-get update \
         openssh-client \
     && rm -rf /var/lib/apt/lists/*
 
-EXPOSE 3000 4200 5173 8080
+EXPOSE 3000 4200 5173 8080 41297
