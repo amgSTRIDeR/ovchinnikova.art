@@ -34,6 +34,11 @@
             "outputMode": "static",
             "security": {
               "allowedHosts": []
+            },
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/styles"
+              ]
             }
           },
           "configurations": {

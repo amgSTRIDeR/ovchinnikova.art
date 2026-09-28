@@ -1,0 +1,73 @@
+@if (artwork) {
+  <article class="artwork-page" id="artwork-page">
+
+      <div class="artwork-image-wrapper">
+        <img class="artwork-image"
+                      [src]="artwork.image"
+                      [alt]="artwork.alt"
+                    >
+      </div>
+      <div class="artwork-content">
+
+    </div>
+<!--    <div class="modal-dialog" role="document">-->
+<!--      <button class="modal-close" type="button" data-modal-close aria-label="Close artwork details">×</button>-->
+<!--      <div class="modal-image-side">-->
+<!--        <img id="modal-image" src="" alt="">-->
+<!--      </div>-->
+<!--      <div class="modal-copy-side">-->
+<!--        <div class="modal-header-row">-->
+<!--          <h2 id="modal-title"></h2>-->
+<!--          <span id="modal-year"></span>-->
+<!--        </div>-->
+<!--        <div class="modal-meta" id="modal-meta"></div>-->
+<!--        <div class="modal-description" id="modal-description"></div>-->
+<!--      </div>-->
+<!--    </div>-->
+  </article>
+
+<!--  @if (artwork) {-->
+<!--    <article class="artwork-page">-->
+
+<!--      <a-->
+<!--        routerLink="/"-->
+<!--        class="artwork-back"-->
+<!--      >-->
+<!--        ← Gallery-->
+<!--      </a>-->
+
+<!--      <div class="artwork-layouts">-->
+
+<!--        <div class="artwork-image">-->
+<!--          <img-->
+<!--            [src]="artwork.image"-->
+<!--            [alt]="artwork.alt"-->
+<!--          >-->
+<!--        </div>-->
+
+<!--        <div class="artwork-content">-->
+
+<!--          <header>-->
+<!--            <div class="artwork-heading">-->
+<!--              <h1>{{ artwork.title }}</h1>-->
+<!--              <span>{{ artwork.year }}</span>-->
+<!--            </div>-->
+
+<!--            <div class="artwork-meta">-->
+<!--              {{ artwork.meta }}-->
+<!--            </div>-->
+<!--          </header>-->
+
+<!--          <div class="artwork-description">-->
+<!--            @for (paragraph of artwork.description; track paragraph) {-->
+<!--              <p>{{ paragraph }}</p>-->
+<!--            }-->
+<!--          </div>-->
+
+<!--        </div>-->
+
+<!--      </div>-->
+
+<!--    </article>-->
+<!--  }-->
+}
