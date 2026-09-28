@@ -1,0 +1,13 @@
+@use 'variables' as *;
+@use 'fonts' as *;
+
+body {
+  min-width: 300px;
+  margin: 0;
+  padding: 0;
+  background: $bg;
+  color: $text;
+  font-family: $sans;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
