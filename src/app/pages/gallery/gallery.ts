@@ -1,9 +1,14 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {Artwork, ARTWORKS} from '../../data/artworks.data';
+import {NgOptimizedImage} from '@angular/common';
+import {RouterLink} from '@angular/router';
 
 @Component({
-  imports: [],
+  imports: [NgOptimizedImage, RouterLink],
   selector: 'app-gallery',
   styleUrl: './gallery.scss',
   templateUrl: './gallery.html',
 })
-export class Gallery {}
+export class Gallery {
+  artworks: Artwork[] = ARTWORKS;
+}

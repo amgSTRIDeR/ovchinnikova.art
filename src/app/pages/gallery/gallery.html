@@ -1,1 +1,36 @@
-<p>gallery works!</p>
+<section class="panel gallery" id="gallery">
+  <header class="section-head section-head-gallery">
+    <div><h1>Gallery</h1></div>
+  </header>
+  <div class="series-block">
+    <div class="series-heading">
+      <h2><span class="series-label">SERIES:</span> CATÁSTROFES</h2><span>2026</span>
+    </div>
+
+    <div class="series-description">
+      <p>Catastrophes happen to everyone. In moments of crisis, it can feel as though the whole world has become
+        unfamiliar. Something within us kicks in and helps us keep going: denial, familiar automatic routines, optimism,
+        or the first steps toward adaptation. The series explores the inner mechanisms of survival in catastrophes, both
+        external and internal, and our ability to find support within ourselves or in the world around us when
+        everything familiar begins to collapse. Sometimes we are stronger than we think.</p>
+    </div>
+
+    <div class="artwork-grid">
+      @for (artwork of artworks; track artwork.slug) {
+        <article class="artwork-card">
+          <button [attr.data-artwork]="artwork.slug" [routerLink]="['/artworks', artwork.slug]"
+                  aria-label="Open {{artwork.title}} artwork details"
+                  class="artwork-open" type="button">
+                <span class="artwork-image-frame">
+                  <img [alt]="artwork.alt" [fill]="true" [ngSrc]="artwork.image">
+                </span>
+          </button>
+          <div class="artwork-info">
+            <div class="artwork-title-row"><h3>{{ artwork.title }}</h3><span>{{ artwork.year }}</span></div>
+            <div class="artwork-meta">{{ artwork.meta }}</div>
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>
