@@ -19,6 +19,10 @@
     border-right: 1px solid $line;
     cursor: zoom-in;
 
+    &:hover img {
+      transform: scale(1.02)
+    }
+
     @media (width < 1000px) {
       border-bottom: 1px solid $line;
       padding: calc(8.000vw - 12.00px);
@@ -34,6 +38,7 @@
     height: 100%;
     object-fit: contain;
     display: block;
+    transition: transform .35s ease;
   }
 
   .artwork-image-fullscreen {
