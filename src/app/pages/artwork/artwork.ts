@@ -9,6 +9,9 @@ import {Artwork, getArtwork,} from '../../data/artworks.data';
   imports: [RouterLink],
   templateUrl: './artwork.html',
   styleUrl: './artwork.scss',
+  host: {
+    '(window:keydown.escape)': 'closeFullscreen()'
+  }
 })
 export class ArtworkPage {
   isFullScreen = false;
