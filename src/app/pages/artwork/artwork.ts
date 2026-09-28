@@ -1,11 +1,8 @@
-import { Component, inject } from '@angular/core';
-import { ActivatedRoute, RouterLink } from '@angular/router';
-import { Meta, Title } from '@angular/platform-browser';
+import {Component, inject} from '@angular/core';
+import {ActivatedRoute, RouterLink} from '@angular/router';
+import {Meta, Title} from '@angular/platform-browser';
 
-import {
-  Artwork,
-  getArtwork,
-} from '../../data/artworks.data';
+import {Artwork, getArtwork,} from '../../data/artworks.data';
 
 @Component({
   selector: 'app-artwork',
@@ -14,11 +11,11 @@ import {
   styleUrl: './artwork.scss',
 })
 export class ArtworkPage {
+  isFullScreen = false;
+  readonly artwork?: Artwork;
   private readonly route = inject(ActivatedRoute);
   private readonly title = inject(Title);
   private readonly meta = inject(Meta);
-
-  readonly artwork?: Artwork;
 
   constructor() {
     const slug = this.route.snapshot.paramMap.get('slug') ?? '';
@@ -37,5 +34,13 @@ export class ArtworkPage {
           `${this.artwork.meta}. Artwork by Olga Ovchinnikova.`,
       });
     }
+  }
+
+  openFullscreen(): void {
+    this.isFullScreen = true;
+  }
+
+  closeFullscreen(): void {
+    this.isFullScreen = false;
   }
 }

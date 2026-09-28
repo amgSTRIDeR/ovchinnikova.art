@@ -1,12 +1,17 @@
 @if (artwork) {
   <article class="artwork-page" id="artwork-page">
-    <a class="artwork-back" routerLink="/" aria-label="Close artwork details">×</a>
+    <a aria-label="Close artwork details" class="artwork-back" routerLink="/">×</a>
     <div class="artwork-image-wrapper">
-      <img class="artwork-image"
-           [src]="artwork.image"
+      <img (click)="openFullscreen()"
            [alt]="artwork.alt"
+           [src]="artwork.image"
+           class="artwork-image"
       >
     </div>
+    @if (isFullScreen) {
+      <img (click)="closeFullscreen()"
+           [alt]="artwork.alt" [src]="artwork.image" class="artwork-image-fullscreen"/>
+    }
     <div class="artwork-content">
       <header>
         <div class="artwork-heading">

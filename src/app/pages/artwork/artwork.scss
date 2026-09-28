@@ -17,6 +17,7 @@
     justify-content: center;
     background: $surface-2;
     border-right: 1px solid $line;
+    cursor: zoom-in;
 
     @media (width < 1000px) {
       border-bottom: 1px solid $line;
@@ -33,6 +34,19 @@
     height: 100%;
     object-fit: contain;
     display: block;
+  }
+
+  .artwork-image-fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100dvh;
+    cursor: zoom-out;
+    z-index: 1000;
+    object-fit: contain;
+    object-position: center;
+    background-color: $bg;
   }
 
   .artwork-back {
