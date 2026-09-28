@@ -2,15 +2,20 @@
   <article class="artwork-page" id="artwork-page">
     <a aria-label="Close artwork details" class="artwork-back" routerLink="/">×</a>
     <div class="artwork-image-wrapper">
-      <img (click)="openFullscreen()"
-           [alt]="artwork.alt"
-           [src]="artwork.image"
-           class="artwork-image"
-      >
+      <div class="artwork-image-shell">
+        <img (click)="openFullscreen()"
+             [alt]="artwork.alt"
+             [fill]="true"
+             [ngSrc]="artwork.image"
+             [priority]="true"
+             class="artwork-image"
+        >
+      </div>
     </div>
     @if (isFullScreen) {
       <img (click)="closeFullscreen()"
-           [alt]="artwork.alt" [src]="artwork.image" class="artwork-image-fullscreen"/>
+           [alt]="artwork.alt" [fill]="true" [ngSrc]="artwork.image" [priority]="true"
+           class="artwork-image-fullscreen"/>
     }
     <div class="artwork-content">
       <header>
@@ -30,50 +35,5 @@
         }
       </div>
     </div>
-    <!--    <div class="modal-dialog" role="document">-->
-    <!--      <button class="modal-close" type="button" data-modal-close aria-label="Close artwork details">×</button>-->
-    <!--      <div class="modal-image-side">-->
-    <!--        <img id="modal-image" src="" alt="">-->
-    <!--      </div>-->
-    <!--      <div class="modal-copy-side">-->
-    <!--        <div class="modal-header-row">-->
-    <!--          <h2 id="modal-title"></h2>-->
-    <!--          <span id="modal-year"></span>-->
-    <!--        </div>-->
-    <!--        <div class="modal-meta" id="modal-meta"></div>-->
-    <!--        <div class="modal-description" id="modal-description"></div>-->
-    <!--      </div>-->
-    <!--    </div>-->
   </article>
-
-  <!--  @if (artwork) {-->
-    <!--    <article class="artwork-page">-->
-
-    <!--      <div class="artwork-layouts">-->
-
-    <!--        <div class="artwork-content">-->
-
-    <!--          <header>-->
-    <!--            <div class="artwork-heading">-->
-    <!--              <h1>{{ artwork.title }}</h1>-->
-    <!--              <span>{{ artwork.year }}</span>-->
-    <!--            </div>-->
-
-    <!--            <div class="artwork-meta">-->
-    <!--              {{ artwork.meta }}-->
-    <!--            </div>-->
-    <!--          </header>-->
-
-    <!--          <div class="artwork-description">-->
-    <!--            @for (paragraph of artwork.description; track paragraph) {-->
-    <!--              <p>{{ paragraph }}</p>-->
-    <!--            }-->
-    <!--          </div>-->
-
-    <!--        </div>-->
-
-    <!--      </div>-->
-
-    <!--    </article>-->
-    <!--  }-->
 }

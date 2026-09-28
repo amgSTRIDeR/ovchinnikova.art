@@ -3,10 +3,11 @@ import {ActivatedRoute, RouterLink} from '@angular/router';
 import {Meta, Title} from '@angular/platform-browser';
 
 import {Artwork, getArtwork,} from '../../data/artworks.data';
+import {NgOptimizedImage} from '@angular/common';
 
 @Component({
   selector: 'app-artwork',
-  imports: [RouterLink],
+  imports: [RouterLink, NgOptimizedImage],
   templateUrl: './artwork.html',
   styleUrl: './artwork.scss',
   host: {
