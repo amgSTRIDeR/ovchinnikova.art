@@ -62,6 +62,16 @@ export const ARTWORKS: Artwork[] = [
       'This work is about the moment when the support you relied on disappears and you have to find another. What keeps you standing when there’s nothing solid beneath your feet anymore?',
     ],
   },
+   {
+    slug: 'overthinking',
+    title: 'Overthinking',
+    year: '2026',
+    meta: 'Oil on canvas · 78.5 × 98.125 cm',
+    image: '/images/Overthinking.webp',
+    alt: 'Overthinking, 2026, oil painting by Olga Ovchinnikova',
+    description: [
+    ],
+  },
 ];
 
 export function getArtwork(slug: string): Artwork | undefined {
