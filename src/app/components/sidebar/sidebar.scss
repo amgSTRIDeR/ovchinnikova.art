@@ -1,0 +1,131 @@
+@use 'variables' as *;
+
+.sidebar {
+  border-right: 1px solid $line;
+  padding: 36px 28px 30px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+
+  .identity {
+    margin-bottom: 44px
+  }
+
+
+  .artist-name {
+    display: block;
+    font-family: $serif;
+    font-size: 24px;
+    line-height: .92;
+    letter-spacing: -.01em;
+    max-width: 170px;
+    margin-bottom: 14px;
+  }
+
+
+  .role, .location {
+    font-size: 12px;
+    line-height: 1.55;
+    color: $muted;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 24px
+  }
+
+  .nav-link {
+    font-size: 14px;
+    color: $muted;
+    padding-left: 16px;
+    border-left: 1px solid transparent;
+    transition: color .18s ease, border-color .18s ease;
+  }
+
+
+  .nav-link:hover {
+    color: $text
+  }
+
+  .nav-link.active {
+    color: $text;
+    border-left-color: $line-strong;
+    font-weight: 500
+  }
+
+  .sidebar-social {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    margin-top: 18px;
+    padding-top: 0;
+    padding-left: 16px
+  }
+
+  .social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    color: $muted;
+    transition: color .18s ease, transform .18s ease
+  }
+
+  .social-link:hover {
+    color: $text;
+    transform: translateY(-1px)
+  }
+
+  .social-link svg {
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.35;
+    stroke-linecap: round;
+    stroke-linejoin: round
+  }
+
+  @media (width <= 820px) {
+    border-right: 0;
+    border-bottom: 1px solid $line;
+    padding: 24px 20px;
+
+    .sidebar-social {
+      margin-top: 14px;
+      padding-top: 0;
+      padding-left: 0
+    }
+    .sidebar-foot {
+      display: none
+    }
+
+    .identity {
+      margin-bottom: 22px
+    }
+
+    .artist-name {
+      max-width: none;
+      font-size: 34px
+    }
+    .nav {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 10px 14px
+    }
+    .nav-link {
+      padding-left: 0;
+      padding-bottom: 2px;
+      border-left: 0;
+      border-bottom: 1px solid transparent
+    }
+    .nav-link.active {
+      border-left: 0;
+      border-bottom-color: $line-strong;
+    }
+  }
+}
+

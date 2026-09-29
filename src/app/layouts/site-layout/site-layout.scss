@@ -1,0 +1,58 @@
+@use 'variables' as *;
+
+:host {
+  display: block;
+  min-height: 100dvh;
+}
+
+.page-window {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  background: $surface;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: hidden;
+
+  @media (width <= 1100px) {
+    width: 100%;
+    margin: 0;
+    min-height: 100vh
+  }
+
+  @media (width <= 600px) {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    border-radius: 0;
+    border-left: 0;
+    border-right: 0
+  }
+
+  .site-shell {
+    display: grid;
+    grid-template-columns: $sidebar 1fr;
+    min-height: 100vh;
+
+    @media (width <= 1100px) {
+      grid-template-columns: 220px 1fr;
+    }
+
+    @media (width <= 820px) {
+      grid-template-columns: 1fr;
+      min-height: 0;
+    }
+  }
+
+  .content {
+    padding: 36px 30px 48px;
+    overflow: hidden;
+
+    @media (width <= 820px) {
+      padding: 26px 20px 34px;
+    }
+  }
+}
+
+

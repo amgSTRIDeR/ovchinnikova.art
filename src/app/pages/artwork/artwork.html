@@ -1,0 +1,39 @@
+@if (artwork) {
+  <article class="artwork-page" id="artwork-page">
+    <a aria-label="Close artwork details" class="artwork-back" routerLink="/">×</a>
+    <div class="artwork-image-wrapper">
+      <div class="artwork-image-shell">
+        <img (click)="openFullscreen()"
+             [alt]="artwork.alt"
+             [fill]="true"
+             [ngSrc]="artwork.image"
+             [priority]="true"
+             class="artwork-image"
+        >
+      </div>
+    </div>
+    @if (isFullScreen) {
+      <img (click)="closeFullscreen()"
+           [alt]="artwork.alt" [fill]="true" [ngSrc]="artwork.image" [priority]="true"
+           class="artwork-image-fullscreen"/>
+    }
+    <div class="artwork-content">
+      <header>
+        <div class="artwork-heading">
+          <h1>{{ artwork.title }}</h1>
+          <span>{{ artwork.year }}</span>
+        </div>
+
+        <div class="artwork-meta">
+          {{ artwork.meta }}
+        </div>
+      </header>
+
+      <div class="artwork-description">
+        @for (paragraph of artwork.description; track paragraph) {
+          <p>{{ paragraph }}</p>
+        }
+      </div>
+    </div>
+  </article>
+}
