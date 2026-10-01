@@ -70,6 +70,23 @@ export const ARTWORKS: Artwork[] = [
     image: '/images/Overthinking.webp',
     alt: 'Overthinking, 2026, oil painting by Olga Ovchinnikova',
     description: [
+      "There is no real threat yet. But the mind is already preparing for one.",
+      
+      "The cats in the bushes aren’t doing anything. You know they’re there. They don’t attack or come any closer — they just watch. But when someone is watching your every move, you quickly start thinking about what will happen if you make a wrong step. It feels like that’s exactly what they’re waiting for.",
+      
+      "And then you’re no longer simply walking down the road. You start thinking about how you walk. Where to put your foot, how you look from the outside, whether you’ve done something wrong.",
+    
+      "\"Overthinking\" is about a state in which nothing bad has happened yet, but you’ve already lived through several versions of how everything could go wrong. You try to spot the danger in advance, prepare for it, and avoid making a mistake.",
+     
+      "At some point, it starts working the other way around. The more carefully you look for signs that something is wrong, the more of them you find. One lynx becomes five. One look turns into the feeling that you’re being watched. The possibility of making a mistake turns into the feeling that one mistake could have terrible consequences.",
+    
+      "You might even forget where you were going in the first place. Instead of getting on with your life, you start looking around. Maybe you should take on all these cats, chase them away, hiss back at them? Or run away and hide? They affect you even though they aren’t actually doing anything.",
+     
+      "But you keep walking. Carefully, trying not to stumble and not to forget where you were going.",
+    
+      "Maybe you really should be more careful. Maybe some of these cats really are dangerous, and you should just stay home and never go outside.",
+    
+      "Or maybe they will always be somewhere nearby, and you’ll have to get used to their silent presence."
     ],
   },
 ];
