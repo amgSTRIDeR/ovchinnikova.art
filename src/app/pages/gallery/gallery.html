@@ -18,11 +18,50 @@
     <div class="artwork-grid">
       @for (artwork of artworks; track artwork.slug) {
         <article class="artwork-card">
-          <button [attr.data-artwork]="artwork.slug" [routerLink]="['/artworks', artwork.slug]"
-                  aria-label="Open {{artwork.title}} artwork details"
-                  class="artwork-open" type="button">
+          <button (pointerenter)="preloadArtwork(artwork.image)" [attr.data-artwork]="artwork.slug"
+                  [routerLink]="['/artworks', artwork.slug]"
+                  aria-label="Open {{artwork.title}} artwork details" class="artwork-open" type="button">
                 <span class="artwork-image-frame">
-                  <img [alt]="artwork.alt" [fill]="true" [ngSrc]="artwork.image">
+                    <picture>
+    <source
+      [attr.srcset]="
+        artwork.image.replace('.webp', '-560w.webp') + ' 1x, ' +
+        artwork.image.replace('.webp', '-1100w.webp') + ' 2x'
+      "
+      media="(max-width: 600px)"
+    />
+
+    <source
+      [attr.srcset]="
+        artwork.image.replace('.webp', '-400w.webp') + ' 1x, ' +
+        artwork.image.replace('.webp', '-800w.webp') + ' 2x'
+      "
+      media="(max-width: 1100px)"
+    />
+
+    <source
+      [attr.srcset]="
+        artwork.image.replace('.webp', '-400w.webp') + ' 1x, ' +
+        artwork.image.replace('.webp', '-800w.webp') + ' 2x'
+      "
+      media="(max-width: 1500px)"
+    />
+
+    <source
+      [attr.srcset]="
+        artwork.image.replace('.webp', '-560w.webp') + ' 1x, ' +
+        artwork.image.replace('.webp', '-1100w.webp') + ' 2x'
+      "
+      media="(max-width: 1800px)"
+    />
+
+    <img
+      [alt]="artwork.alt"
+      [src]="artwork.image.replace('.webp', '-560w.webp')"
+      decoding="async"
+      loading="eager"
+    />
+  </picture>
                 </span>
           </button>
           <div class="artwork-info">
