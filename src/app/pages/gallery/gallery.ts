@@ -10,4 +10,16 @@ import {RouterLink} from '@angular/router';
 })
 export class Gallery {
   artworks: Artwork[] = ARTWORKS;
+  private readonly preloadedImages = new Map<string, HTMLImageElement>();
+
+  preloadArtwork(src: string): void {
+    if (typeof Image === 'undefined' || this.preloadedImages.has(src)) {
+      return;
+    }
+
+    const image = new Image();
+    image.src = src;
+
+    this.preloadedImages.set(src, image);
+  }
 }

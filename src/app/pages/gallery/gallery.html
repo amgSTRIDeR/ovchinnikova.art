@@ -18,9 +18,9 @@
     <div class="artwork-grid">
       @for (artwork of artworks; track artwork.slug) {
         <article class="artwork-card">
-          <button [attr.data-artwork]="artwork.slug" [routerLink]="['/artworks', artwork.slug]"
-                  aria-label="Open {{artwork.title}} artwork details"
-                  class="artwork-open" type="button">
+          <button (pointerenter)="preloadArtwork(artwork.image)" [attr.data-artwork]="artwork.slug"
+                  [routerLink]="['/artworks', artwork.slug]"
+                  aria-label="Open {{artwork.title}} artwork details" class="artwork-open" type="button">
                 <span class="artwork-image-frame">
                     <picture>
     <source
