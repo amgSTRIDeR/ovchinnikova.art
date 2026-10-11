@@ -35,11 +35,11 @@
 
     @media (width < 1000px) {
       border-bottom: 1px solid $line;
-      padding: calc(3.000vw - 12.00px);
+      padding: 20px calc(3.000vw - 12.00px);
     }
 
     @media (width < 300px) {
-      padding: 0;
+      padding: 20px 0;
     }
   }
 
