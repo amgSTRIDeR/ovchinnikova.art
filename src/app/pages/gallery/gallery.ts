@@ -1,6 +1,7 @@
-import {Component} from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {Artwork, ARTWORKS} from '../../data/artworks.data';
 import {RouterLink} from '@angular/router';
+import {Meta} from '@angular/platform-browser';
 
 @Component({
   imports: [RouterLink],
@@ -11,6 +12,14 @@ import {RouterLink} from '@angular/router';
 export class Gallery {
   artworks: Artwork[] = ARTWORKS;
   private readonly preloadedImages = new Map<string, HTMLImageElement>();
+  private readonly meta = inject(Meta);
+
+  constructor() {
+    this.meta.updateTag({
+      name: 'description',
+      content: 'Explore original paintings by contemporary artist Olga Ovchinnikova. Discover her artistic vision and selected artworks.'
+    });
+  }
 
   preloadArtwork(src: string): void {
     if (typeof Image === 'undefined' || this.preloadedImages.has(src)) {
