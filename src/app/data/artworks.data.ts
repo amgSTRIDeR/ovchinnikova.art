@@ -89,6 +89,16 @@ export const ARTWORKS: Artwork[] = [
       "Or maybe they will always be somewhere nearby, and you’ll have to get used to their silent presence."
     ],
   },
+    {
+    slug: 'he_wont_bite',
+    title: "He Won't Bite",
+    year: '2026',
+    meta: 'Oil on canvas · 100 × 100 cm',
+    image: '/images/he_wont_bite.webp',
+    alt: "He Won't Bite, 2026, oil painting by Olga Ovchinnikova",
+    description: [
+    ],
+  },
 ];
 
 export function getArtwork(slug: string): Artwork | undefined {
