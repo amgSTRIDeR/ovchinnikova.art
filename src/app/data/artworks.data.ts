@@ -67,7 +67,7 @@ export const ARTWORKS: Artwork[] = [
     title: 'Overthinking',
     year: '2026',
     meta: 'Oil on canvas · 78.5 × 98.125 cm',
-    image: '/images/Overthinking.webp',
+    image: '/images/overthinking.webp',
     alt: 'Overthinking, 2026, oil painting by Olga Ovchinnikova',
     description: [
       "There is no real threat yet. But the mind is already preparing for one.",
