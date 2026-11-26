@@ -44,6 +44,12 @@ export const routes: Routes = [
           import('./pages/contact/contact').then(m => m.Contact),
         title: 'Contact — Olga Ovchinnikova',
       },
+      {
+      path: 'privacy',
+      title: 'Privacy Policy | Olga Ovchinnikova',
+      loadComponent: () =>
+        import('./pages/privacy/privacy').then(m => m.Privacy)
+      },
     ]
   },
   {
