@@ -34,14 +34,24 @@
     display: grid;
     grid-template-columns: $sidebar 1fr;
     min-height: 100vh;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: 
+    'app-sidebar main'
+    'app-sidebar app-footer';
 
     @media (width <= 1100px) {
       grid-template-columns: 220px 1fr;
+      grid-template-rows: 1fr auto;
     }
 
     @media (width <= 820px) {
       grid-template-columns: 1fr;
-      min-height: 0;
+      grid-template-rows: auto 1fr auto;
+      grid-template-areas:
+        'app-sidebar'
+        'main'
+        'app-footer';
+      min-height: 100dvh;
     }
   }
 
@@ -52,6 +62,18 @@
     @media (width <= 820px) {
       padding: 26px 20px 34px;
     }
+  }
+
+  .main {
+    grid-area: main;
+  }
+
+  .app-footer {
+    grid-area: app-footer;
+  }
+
+  .app-sidebar {
+    grid-area: app-sidebar;
   }
 }
 
