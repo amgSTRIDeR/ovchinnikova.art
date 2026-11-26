@@ -1,0 +1,47 @@
+<article class="privacy" [attr.lang]="language()">
+  <header class="privacy-header">
+    <h1>{{ translation().title }}</h1>
+
+    <div class="language-switch"
+         role="group"
+         aria-label="Language / Idioma">
+
+      <button type="button"
+              lang="en"
+              [class.active]="language() === 'en'"
+              [attr.aria-pressed]="language() === 'en'"
+              (click)="setLanguage('en')">
+        EN
+      </button>
+
+      <span aria-hidden="true">/</span>
+
+      <button type="button"
+              lang="es"
+              [class.active]="language() === 'es'"
+              [attr.aria-pressed]="language() === 'es'"
+              (click)="setLanguage('es')">
+        ES
+      </button>
+    </div>
+  </header>
+
+  <p class="privacy-meta">
+    ovchinnikova.art — Olga Ovchinnikova
+  </p>
+
+  @for (section of translation().sections; track $index) {
+    <section>
+      <h2>{{ section.title }}</h2>
+      <p>{{ section.text }}</p>
+
+      @if (section.link; as link) {
+        <a [href]="link.url"
+           target="_blank"
+           rel="noopener noreferrer">
+          {{ link.label }}
+        </a>
+      }
+    </section>
+  }
+</article>
