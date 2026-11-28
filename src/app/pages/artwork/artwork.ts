@@ -4,10 +4,11 @@ import {Meta, Title} from '@angular/platform-browser';
 
 import {Artwork, getArtwork,} from '../../data/artworks.data';
 import {NgOptimizedImage} from '@angular/common';
+import {ImageFadeDirective} from '../../directives/image-fade.directive';
 
 @Component({
   selector: 'app-artwork',
-  imports: [RouterLink, NgOptimizedImage],
+  imports: [RouterLink, NgOptimizedImage, ImageFadeDirective],
   templateUrl: './artwork.html',
   styleUrl: './artwork.scss',
   host: {

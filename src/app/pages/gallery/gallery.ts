@@ -2,9 +2,10 @@ import {Component, inject} from '@angular/core';
 import {Artwork, ARTWORKS} from '../../data/artworks.data';
 import {RouterLink} from '@angular/router';
 import {Meta} from '@angular/platform-browser';
+import {ImageFadeDirective} from '../../directives/image-fade.directive';
 
 @Component({
-  imports: [RouterLink],
+  imports: [RouterLink, ImageFadeDirective],
   selector: 'app-gallery',
   styleUrl: './gallery.scss',
   templateUrl: './gallery.html',

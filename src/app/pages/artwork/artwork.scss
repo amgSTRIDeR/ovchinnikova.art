@@ -48,7 +48,7 @@
     height: 100%;
     object-fit: contain;
     display: block;
-    transition: transform .35s ease;
+    transition: opacity .45s ease, transform .35s ease;
   }
 
   .artwork-image-fullscreen {

@@ -4,6 +4,7 @@
     <div class="artwork-image-wrapper">
       <div class="artwork-image-shell">
         <img (click)="openFullscreen()"
+             appImageFade
              [alt]="artwork.alt"
              [fill]="true"
              [ngSrc]="artwork.image"
@@ -14,6 +15,7 @@
     </div>
     @if (isFullScreen) {
       <img (click)="closeFullscreen()"
+           appImageFade
            [alt]="artwork.alt" [fill]="true" [ngSrc]="artwork.image" [priority]="true"
            class="artwork-image-fullscreen"/>
     }
